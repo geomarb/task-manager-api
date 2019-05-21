@@ -4,7 +4,7 @@ const userRouter = require('./routers/user')
 const taskRouter = require('./routers/task')
 
 const app = express()
-const server = { ip: process.env.IP, port: process.env.PORT }
+const server = { port: process.env.PORT }
 
 // const isInMaintenance = false
 // app.use((req, res, next) => {
@@ -16,6 +16,6 @@ app.use(express.json())
 app.use(userRouter)
 app.use(taskRouter)
 
-app.listen(server.port, server.ip, () => {
+app.listen(server.port, () => {
     console.log(`Task Manager server is up on http://${server.ip}:${server.port}`)
 })
