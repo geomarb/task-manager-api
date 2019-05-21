@@ -17,5 +17,5 @@ app.use(userRouter)
 app.use(taskRouter)
 
 app.listen(server.port, () => {
-    console.log(`Task Manager server is up on http://${server.ip}:${server.port}`)
+    console.log(`Task Manager server is up on PORT:${server.port}`)
 })
